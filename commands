@@ -1,0 +1,9 @@
+docker run --name mysql -p 3306:3306 -d \
+  -e 'DB_USER=balance' -e 'DB_PASS=123456789' -e 'DB_NAME=dbbalance' \
+  sameersbn/mysql:5.7.26-0
+
+
+  -----
+
+  Build the Docker image: docker build -t mysql-container .
+  Run the container: docker run --name mysql -p 3306:3306 -d -e DB_USER=balance -e DB_PASS=123456789 -e DB_NAME=dbbalance mysql-container
